@@ -115,26 +115,33 @@
   }
   .channel-orb {
     width:108px; height:108px; border-radius:50%;
-    display:flex; align-items:center; justify-content:center;
-    font-family:'Sora'; font-weight:700; font-size:15px;
+    display:flex; flex-direction:column; align-items:center; justify-content:center; gap:3px;
     position:relative; z-index:3;
     border:1px solid var(--line-dark);
   }
+  .channel-orb .ch-label { font-family:'Inter'; font-weight:500; font-size:9px; letter-spacing:0.14em; text-transform:uppercase; opacity:0.4; }
+  .channel-orb .ch-name { font-family:'Inter'; font-weight:600; font-size:19px; letter-spacing:-0.01em; }
   .channel-orb.a { background: linear-gradient(160deg,#2b2730,#1a1820); color:rgba(255,255,255,0.75); }
   .channel-orb.b { background: linear-gradient(160deg, var(--ember), #8f2412); color:#fff; }
   .track { width: min(520px, 60vw); height:1px; background: var(--line-dark); position:relative; margin: 0 -2px; }
-  .dot {
-    position:absolute; top:50%; width:9px; height:9px; border-radius:50%;
-    background: var(--gold);
-    offset-path: path('M 0 0 Q 130 -46 260 0 T 520 0');
-    offset-rotate: 0deg;
-    animation: fly 3.2s linear infinite;
-    box-shadow: 0 0 14px 2px rgba(212,160,23,0.55);
+  .bell-fly {
+    position:absolute; top:50%; left:0%; width:15px; height:15px;
+    color: var(--gold); opacity:0;
+    animation: bellfly 3.2s ease-in-out infinite;
+    filter: drop-shadow(0 0 6px rgba(212,160,23,0.55));
   }
-  .dot:nth-child(2){ animation-delay:0.7s; background:var(--ember-soft); box-shadow:0 0 14px 2px rgba(226,104,63,0.5);}
-  .dot:nth-child(3){ animation-delay:1.5s; }
-  .dot:nth-child(4){ animation-delay:2.2s; background:var(--ember-soft); box-shadow:0 0 14px 2px rgba(226,104,63,0.5);}
-  @keyframes fly { 0%{ offset-distance:0%; opacity:0; } 8%{opacity:1;} 92%{opacity:1;} 100%{ offset-distance:100%; opacity:0; } }
+  .bell-fly svg { width:100%; height:100%; display:block; }
+  .bell-fly:nth-child(2){ animation-delay:0.8s; color:var(--ember-soft); filter: drop-shadow(0 0 6px rgba(226,104,63,0.5)); }
+  .bell-fly:nth-child(3){ animation-delay:1.6s; }
+  .bell-fly:nth-child(4){ animation-delay:2.4s; color:var(--ember-soft); filter: drop-shadow(0 0 6px rgba(226,104,63,0.5)); }
+  @keyframes bellfly {
+    0%   { left:0%;   opacity:0;  transform: translate(-50%,0) rotate(-8deg); }
+    10%  { opacity:1; }
+    35%  { transform: translate(-50%,-26px) rotate(4deg); }
+    65%  { transform: translate(-50%,20px) rotate(-4deg); }
+    90%  { opacity:1; }
+    100% { left:100%; opacity:0; transform: translate(-50%,0) rotate(8deg); }
+  }
   @media (max-width: 640px){ .transfer-stage{ transform: scale(0.72);} }
 
   /* ---------- reveal ---------- */
@@ -301,14 +308,14 @@
   </div>
 
   <div class="transfer-stage">
-    <div class="channel-orb a">Kanal A</div>
+    <div class="channel-orb a"><span class="ch-label">Kanal</span><span class="ch-name">A</span></div>
     <div class="track">
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
+      <div class="bell-fly"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2C8 2 6 5 6 9v4l-2 3v1h16v-1l-2-3V9c0-4-2-7-6-7z" fill="currentColor"/><path d="M9.5 19a2.5 2.5 0 0 0 5 0" stroke="currentColor" stroke-width="1.6" fill="none"/></svg></div>
+      <div class="bell-fly"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2C8 2 6 5 6 9v4l-2 3v1h16v-1l-2-3V9c0-4-2-7-6-7z" fill="currentColor"/><path d="M9.5 19a2.5 2.5 0 0 0 5 0" stroke="currentColor" stroke-width="1.6" fill="none"/></svg></div>
+      <div class="bell-fly"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2C8 2 6 5 6 9v4l-2 3v1h16v-1l-2-3V9c0-4-2-7-6-7z" fill="currentColor"/><path d="M9.5 19a2.5 2.5 0 0 0 5 0" stroke="currentColor" stroke-width="1.6" fill="none"/></svg></div>
+      <div class="bell-fly"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2C8 2 6 5 6 9v4l-2 3v1h16v-1l-2-3V9c0-4-2-7-6-7z" fill="currentColor"/><path d="M9.5 19a2.5 2.5 0 0 0 5 0" stroke="currentColor" stroke-width="1.6" fill="none"/></svg></div>
     </div>
-    <div class="channel-orb b">Kanal B</div>
+    <div class="channel-orb b"><span class="ch-label">Kanal</span><span class="ch-name">B</span></div>
   </div>
 </header>
 
@@ -355,12 +362,40 @@
     <div class="step-row reveal">
       <div>
         <div class="step-num">Adım 03</div>
+        <h3>Aktarılacak kanalları seç</h3>
+        <p>Kaynak hesaptaki tüm abonelikler listelenir, hangilerinin taşınacağını tek tek veya toplu olarak sen belirlersin.</p>
+      </div>
+      <div class="panel" style="gap:8px;">
+        <div class="fake-row" style="padding:8px 12px;"><div class="fake-avatar" style="width:24px;height:24px;"></div><div class="fake-lines"><div class="fake-title" style="font-size:12.5px;">Teknoloji Kanalım</div></div><div class="fake-check"></div></div>
+        <div class="fake-row" style="padding:8px 12px;"><div class="fake-avatar" style="width:24px;height:24px;background:linear-gradient(160deg,#3a3742,#221f28)"></div><div class="fake-lines"><div class="fake-title" style="font-size:12.5px;">Müzik Kanalım</div></div><div class="fake-check"></div></div>
+        <div class="fake-row" style="padding:8px 12px;"><div class="fake-avatar" style="width:24px;height:24px;background:linear-gradient(160deg,var(--gold),var(--ember))"></div><div class="fake-lines"><div class="fake-title" style="font-size:12.5px;">Belgesel Arşivi</div></div><div class="fake-check"></div></div>
+        <div style="font-size:11px;color:var(--ash);text-align:right;margin-top:2px;">3 / 342 seçildi</div>
+      </div>
+    </div>
+
+    <div class="step-row rev reveal">
+      <div>
+        <div class="step-num">Adım 04</div>
         <h3>SubSync aktarımı senin adına yapar</h3>
         <p>Abonelerin tek tek, hatasız şekilde taşınır. İlerlemeyi canlı takip edersin.</p>
       </div>
-      <div class="panel">
-        <div style="font-size:13px;color:var(--ash);margin-bottom:4px;">64 / 80 aktarıldı</div>
-        <div class="fake-progress"><span style="width:64%"></span></div>
+      <div class="panel" style="background:var(--deep); border-color:var(--deep); align-items:stretch; justify-content:flex-start; padding:22px;">
+        <div style="display:flex;align-items:center;gap:10px;color:#fff;font-family:'Sora';font-weight:700;font-size:14px;margin-bottom:16px;">
+          <span style="opacity:0.6;">←</span> Target &amp; Transfer
+        </div>
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:22px;">
+          <span style="width:20px;height:20px;border-radius:50%;background:#2f6fed;color:#fff;font-size:10px;display:flex;align-items:center;justify-content:center;font-weight:700;">1</span>
+          <span style="font-size:10.5px;color:rgba(255,255,255,0.55);">Source</span>
+          <span style="width:20px;height:20px;border-radius:50%;background:#2f6fed;color:#fff;font-size:10px;display:flex;align-items:center;justify-content:center;font-weight:700;margin-left:8px;">2</span>
+          <span style="font-size:10.5px;color:rgba(255,255,255,0.55);">Channels</span>
+          <span style="width:20px;height:20px;border-radius:50%;background:rgba(255,255,255,0.15);color:rgba(255,255,255,0.6);font-size:10px;display:flex;align-items:center;justify-content:center;font-weight:700;margin-left:8px;">3</span>
+        </div>
+        <div style="text-align:center;color:#fff;font-family:'Sora';font-weight:700;font-size:13px;margin-bottom:10px;">Transferring channels… %80 (64/80)</div>
+        <div class="fake-progress" style="background:rgba(255,255,255,0.1);margin-bottom:16px;"><span style="width:80%"></span></div>
+        <div style="display:flex;align-items:center;gap:8px;">
+          <span style="width:16px;height:16px;border-radius:5px;background:#1FAA59;display:flex;align-items:center;justify-content:center;font-size:10px;color:#fff;">✓</span>
+          <span style="font-size:12px;color:rgba(255,255,255,0.75);">Teknoloji Kanalım</span>
+        </div>
       </div>
     </div>
   </div>
