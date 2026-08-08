@@ -125,7 +125,7 @@
   .channel-orb.b { background: linear-gradient(160deg, var(--ember), #8f2412); color:#fff; }
   .track { width: min(520px, 60vw); height:1px; background: var(--line-dark); position:relative; margin: 0 -2px; }
   .bell-fly {
-    position:absolute; top:50%; left:0%; width:15px; height:15px;
+    position:absolute; top:50%; left:0%; width:30px; height:30px;
     color: var(--gold); opacity:0;
     animation: bellfly 3.2s ease-in-out infinite;
     filter: drop-shadow(0 0 6px rgba(212,160,23,0.55));
@@ -323,7 +323,7 @@
   <div class="wrap">
     <div class="section-head reveal">
       <div class="eyebrow">Süreç</div>
-      <h2>Üç adımda, kontrol tamamen sende</h2>
+      <h2>Dört adımda, kontrol tamamen sende</h2>
       <p>Hiçbir şifre paylaşmazsın. Her adımda hangi kanalın etkilendiğini sen onaylarsın.</p>
     </div>
 
@@ -379,23 +379,13 @@
         <h3>SubSync aktarımı senin adına yapar</h3>
         <p>Abonelerin tek tek, hatasız şekilde taşınır. İlerlemeyi canlı takip edersin.</p>
       </div>
-      <div class="panel" style="background:var(--deep); border-color:var(--deep); align-items:stretch; justify-content:flex-start; padding:22px;">
-        <div style="display:flex;align-items:center;gap:10px;color:#fff;font-family:'Sora';font-weight:700;font-size:14px;margin-bottom:16px;">
-          <span style="opacity:0.6;">←</span> Target &amp; Transfer
+      <div class="panel">
+        <div class="fake-row" style="margin-bottom:14px;">
+          <div class="fake-avatar"></div>
+          <div class="fake-lines"><div class="fake-title">Teknoloji Kanalım</div><div class="fake-sub">Aktarılıyor…</div></div>
         </div>
-        <div style="display:flex;align-items:center;gap:8px;margin-bottom:22px;">
-          <span style="width:20px;height:20px;border-radius:50%;background:#2f6fed;color:#fff;font-size:10px;display:flex;align-items:center;justify-content:center;font-weight:700;">1</span>
-          <span style="font-size:10.5px;color:rgba(255,255,255,0.55);">Source</span>
-          <span style="width:20px;height:20px;border-radius:50%;background:#2f6fed;color:#fff;font-size:10px;display:flex;align-items:center;justify-content:center;font-weight:700;margin-left:8px;">2</span>
-          <span style="font-size:10.5px;color:rgba(255,255,255,0.55);">Channels</span>
-          <span style="width:20px;height:20px;border-radius:50%;background:rgba(255,255,255,0.15);color:rgba(255,255,255,0.6);font-size:10px;display:flex;align-items:center;justify-content:center;font-weight:700;margin-left:8px;">3</span>
-        </div>
-        <div style="text-align:center;color:#fff;font-family:'Sora';font-weight:700;font-size:13px;margin-bottom:10px;">Transferring channels… %80 (64/80)</div>
-        <div class="fake-progress" style="background:rgba(255,255,255,0.1);margin-bottom:16px;"><span style="width:80%"></span></div>
-        <div style="display:flex;align-items:center;gap:8px;">
-          <span style="width:16px;height:16px;border-radius:5px;background:#1FAA59;display:flex;align-items:center;justify-content:center;font-size:10px;color:#fff;">✓</span>
-          <span style="font-size:12px;color:rgba(255,255,255,0.75);">Teknoloji Kanalım</span>
-        </div>
+        <div style="display:flex;justify-content:space-between;font-size:13px;color:var(--ash);margin-bottom:4px;"><span>2 / 3 aktarıldı</span><span style="font-weight:600;color:var(--ink);">%67</span></div>
+        <div class="fake-progress"><span style="width:67%"></span></div>
       </div>
     </div>
   </div>
