@@ -253,8 +253,12 @@
   footer { background: var(--deep); color: rgba(255,255,255,0.5); padding: 54px 0 40px; }
   footer .wrap { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:20px; }
   footer .brand span { color:#fff; }
-  .foot-links { display:flex; gap:26px; font-size:13.5px; }
+  .foot-links { display:flex; gap:26px; font-size:13.5px; align-items:flex-start; }
   .foot-links a:hover { color:#fff; }
+  .foot-contact { display:flex; flex-direction:column; gap:3px; }
+  .foot-contact .label { font-size:13.5px; color:inherit; }
+  .foot-contact .mail-muted { font-family:'IBM Plex Mono'; font-size:10.5px; letter-spacing:0.02em; color:rgba(255,255,255,0.35); }
+  .foot-contact .mail-muted:hover { color:#fff; }
   .foot-fine { font-size:12.5px; color:rgba(255,255,255,0.3); margin-top: 30px; }
 
   @media (max-width: 860px){
@@ -459,7 +463,11 @@
     </div>
     <div class="foot-links">
       <a href="https://getsubsync.com/privacy.html">Gizlilik Politikası</a>
-      <a href="mailto:circassian1977@gmail.com">İletişim</a>
+      <a href="https://getsubsync.com/privacy.html#terms">Kullanım Şartları</a>
+      <div class="foot-contact">
+        <span class="label">İletişim</span>
+        <a href="mailto:circassian1977@gmail.com" class="mail-muted">circassian1977@gmail.com</a>
+      </div>
     </div>
   </div>
   <div class="wrap foot-fine">© 2026 SubSync. Tüm hakları saklıdır. Bu sayfa bir tasarım taslağıdır (mockup).</div>
