@@ -31,7 +31,7 @@
 <p>SubSync, aynı Google hesabına bağlı ve/veya farklı Google hesapları arasındaki YouTube kanallarında abonelikleri yönetmenizi ve seçtiğiniz abonelikleri bir hesaptan diğerine aktarmanızı sağlayan bir mobil uygulamadır. Uygulama, kullanıcıların Google OAuth ile güvenli şekilde giriş yapmasını sağlar, iki hesap arasındaki abonelik listelerini karşılaştırır ve kullanıcının seçtiği kanalları tek tek veya toplu olarak hedef hesaba aktarır. SubSync, abonelik listeleri ve kanal bilgileri gibi kişisel kullanıcı verilerini herhangi bir sunucuda saklamaz; tüm işlemler doğrudan Google'ın YouTube API'si üzerinden, kullanıcının kendi onayıyla gerçekleştirilir.</p>
 
 <h2>SubSync Gizlilik Politikası</h2>
-<p class="updated">Son güncelleme: 6 Ağustos 2026</p>
+<p class="updated">Son güncelleme: 24 Ağustos 2026</p>
 
 <h3>Topladığımız Bilgiler</h3>
 <p>SubSync, Google hesabınızla giriş yaptığınızda aşağıdaki bilgilere erişim ister:</p>
@@ -53,10 +53,16 @@
 <h3>Kota Yönetimi İçin Tutulan Anonim Sayaçlar</h3>
 <p>SubSync, günlük API kullanım kotasını yönetebilmek amacıyla Firebase (Google) altyapısında yalnızca toplam/anonim transfer sayaçları tutar. Bu sayaçlar herhangi bir kullanıcı kimliği, hesap veya e-posta ile ilişkilendirilmez; yalnızca "bugün kaç transfer yapıldı" bilgisini içerir ve kişisel veri sayılmaz.</p>
 
+<h3>YouTube API Hizmetlerinin Kullanımı</h3>
+<p><strong>SubSync, YouTube API Hizmetlerini (YouTube API Services) kullanır.</strong> Uygulamanın abonelik görüntüleme ve aktarma işlevleri, doğrudan Google'ın YouTube Data API v3'ü üzerinden çalışır. YouTube API Hizmetlerini kullanarak, aynı zamanda <a href="https://www.youtube.com/t/terms">YouTube Hizmet Şartlarını</a> kabul etmiş olursunuz. Google'ın gizlilik uygulamaları hakkında daha fazla bilgi için: <a href="https://policies.google.com/privacy">Google Gizlilik Politikası</a>.</p>
+
 <h3>Kullandığımız Üçüncü Taraf Servisler</h3>
-<p>SubSync aşağıdaki Google hizmetlerini kullanır: Google OAuth (giriş), YouTube Data API (abonelik işlemleri), Google AdMob (reklam), ve Firebase (Cloud Functions, Remote Config, Firestore - kota yönetimi ve uygulama yapılandırması için). Bu servislerin her biri kendi gizlilik politikalarına tabidir: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a></p>
+<p>SubSync aşağıdaki Google hizmetlerini kullanır: Google OAuth (giriş), YouTube Data API / YouTube API Hizmetleri (abonelik işlemleri), Google AdMob (reklam), ve Firebase (Cloud Functions, Remote Config, Firestore, App Check - kota yönetimi, kötüye kullanımı önleme ve uygulama yapılandırması için). Bu servislerin her biri kendi gizlilik politikalarına tabidir: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a></p>
 
 <p>SubSync, sunucularında kişisel kullanıcı verisi saklamaz. Uygulama yalnızca Google'ın YouTube API'sine doğrudan bağlanır. Erişimi iptal etmek için: Google Hesabınız → Güvenlik → Üçüncü taraf erişimi bölümünden 'SubSync'i kaldırabilir, veya <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a> adresini ziyaret edebilirsiniz.</p>
+
+<h3>Çerezler ve Cihaz Bilgileri</h3>
+<p>SubSync'in kendisi çerez kullanmaz, ancak uygulama içinde çalışan üçüncü taraf servis sağlayıcılarımız (Google Firebase ve Google AdMob) cihazınızdan veya cihazınız üzerinden, çerezlere benzer teknolojiler (cihaz tanımlayıcıları, reklam kimlikleri, App Check bütünlük belirteçleri gibi) dahil olmak üzere bilgilere erişebilir, bu bilgileri toplayabilir veya saklayabilir. Bu bilgiler; uygulamayı çalıştırmak, kötüye kullanımı/sahte istekleri önlemek (Firebase App Check) ve reklamları göstermek/ölçmek (AdMob) amacıyla kullanılır. Bu servislerin veri toplama ve kişiselleştirme uygulamaları hakkında detaylı bilgi için: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a> ve <a href="https://firebase.google.com/support/privacy">firebase.google.com/support/privacy</a>.</p>
 
 <h3>Veri Koruma Mekanizmaları</h3>
 <p>SubSync, Google hesabınızdan yalnızca YouTube abonelik bilgilerinize erişim sağlamak için OAuth 2.0 protokolünü kullanır; şifrenizi hiçbir zaman görmez veya saklamaz.</p>
@@ -86,13 +92,14 @@
 <p><strong>İletişim:</strong> support@getsubsync.com</p>
 
 <h2>SubSync Hizmet Şartları</h2>
-<p class="updated">Son güncelleme: 6 Ağustos 2026</p>
+<p class="updated">Son güncelleme: 24 Ağustos 2026</p>
 
 <p>SubSync'i kullanarak aşağıdaki şartları kabul etmiş olursunuz:</p>
 <ul>
   <li>SubSync, kullanıcıların kendi YouTube hesapları arasında abonelik yönetimini kolaylaştıran bağımsız bir araçtır; Google veya YouTube tarafından geliştirilmemiş, onaylanmamış veya sponsorluğu yapılmamıştır.</li>
   <li>SubSync yalnızca kullanıcının kendi onayladığı Google hesapları üzerinde işlem yapar.</li>
   <li>Kullanıcılar, uygulamayı YouTube'un Hizmet Şartları ve API kullanım politikalarına uygun şekilde kullanmayı kabul eder.</li>
+  <li><strong>SubSync'i kullanarak, YouTube API Hizmetlerini kullanmış olursunuz ve bu nedenle <a href="https://www.youtube.com/t/terms">YouTube Hizmet Şartlarına</a> da bağlı olmayı kabul edersiniz.</strong></li>
   <li>SubSync "olduğu gibi" sunulur, kesintisiz veya hatasız çalışacağı garanti edilmez.</li>
   <li>Hizmet şartlarındaki değişiklikler bu sayfada yayınlanır.</li>
 </ul>
@@ -113,7 +120,7 @@
 <p lang="en">SubSync is a mobile app that lets you manage subscriptions across YouTube channels linked to the same Google account and/or across different Google accounts, and transfer selected subscriptions from one account to another.</p>
 
 <h2 lang="en">SubSync Privacy Policy</h2>
-<p class="updated" lang="en">Last updated: August 6, 2026</p>
+<p class="updated" lang="en">Last updated: August 24, 2026</p>
 
 <h3 lang="en">Information We Collect</h3>
 <p lang="en">When you sign in with your Google account, SubSync requests access to:</p>
@@ -135,10 +142,16 @@
 <h3 lang="en">Anonymous Counters Used for Quota Management</h3>
 <p lang="en">To manage its daily API usage quota, SubSync keeps only aggregate/anonymous transfer counters on Firebase (Google) infrastructure. These counters are not linked to any user identity, account, or email address; they only record "how many transfers happened today" and do not constitute personal data.</p>
 
+<h3 lang="en">Our Use of YouTube API Services</h3>
+<p lang="en"><strong>SubSync uses YouTube API Services.</strong> The app's subscription viewing and transfer features are powered directly by Google's YouTube Data API v3. By using SubSync, you are also agreeing to be bound by the <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>. For more information on how Google handles data, see the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
+
 <h3 lang="en">Third-Party Services We Use</h3>
-<p lang="en">SubSync uses the following Google services: Google OAuth (sign-in), YouTube Data API (subscription operations), Google AdMob (advertising), and Firebase (Cloud Functions, Remote Config, Firestore — for quota management and app configuration). Each of these is subject to its own privacy policy: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a></p>
+<p lang="en">SubSync uses the following Google services: Google OAuth (sign-in), YouTube Data API / YouTube API Services (subscription operations), Google AdMob (advertising), and Firebase (Cloud Functions, Remote Config, Firestore, App Check — for quota management, abuse prevention, and app configuration). Each of these is subject to its own privacy policy: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a></p>
 
 <p lang="en">SubSync does not store personal user data on its own servers. The app connects directly to Google's YouTube API only. To revoke access: go to Google Account → Security → Third-party access and remove 'SubSync', or visit <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</p>
+
+<h3 lang="en">Cookies and Device Information</h3>
+<p lang="en">SubSync itself does not use cookies, but the third-party service providers operating within the app (Google Firebase and Google AdMob) may access, collect, or store information on or from your device — including through cookies or similar technologies such as device identifiers, advertising identifiers, and App Check integrity tokens. This information is used to operate the app, to help prevent abuse and fraudulent requests (Firebase App Check), and to serve and measure ads (AdMob). For details on how these services collect and personalize data, see <a href="https://policies.google.com/privacy">policies.google.com/privacy</a> and <a href="https://firebase.google.com/support/privacy">firebase.google.com/support/privacy</a>.</p>
 
 <h3 lang="en">Data Protection Mechanisms</h3>
 <p lang="en">SubSync uses OAuth 2.0 to access your YouTube subscription data through your Google account; it never sees or stores your password.</p>
@@ -168,13 +181,14 @@
 <p lang="en"><strong>Contact:</strong> support@getsubsync.com</p>
 
 <h2 lang="en">SubSync Terms of Service</h2>
-<p class="updated" lang="en">Last updated: August 6, 2026</p>
+<p class="updated" lang="en">Last updated: August 24, 2026</p>
 
 <p lang="en">By using SubSync, you agree to the following terms:</p>
 <ul lang="en">
   <li>SubSync is an independent tool that helps users manage subscriptions across their own YouTube accounts; it is not developed, endorsed, or sponsored by Google or YouTube.</li>
   <li>SubSync only performs actions on Google accounts that the user has explicitly authorized.</li>
   <li>Users agree to use the app in accordance with YouTube's Terms of Service and API usage policies.</li>
+  <li><strong>By using SubSync, you use YouTube API Services, and you therefore agree to be bound by the <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>.</strong></li>
   <li>SubSync is provided "as is", without any guarantee of uninterrupted or error-free operation.</li>
   <li>Changes to these terms will be posted on this page.</li>
 </ul>
