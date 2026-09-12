@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gizli Kasa - Gizlilik Politikası ve Hizmet Şartları</title>
+<link rel="canonical" href="https://getsubsync.com/gizlikasa/privacy.html" />
+<style>
+body {
+font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+max-width: 800px;
+margin: 0 auto;
+padding: 32px 20px 80px;
+line-height: 1.6;
+color: #222;
+}
+h1 { font-size: 28px; margin-top: 48px; }
+h2 { font-size: 20px; margin-top: 36px; border-bottom: 1px solid #ddd; padding-bottom: 6px; }
+h3 { font-size: 16px; margin-top: 24px; }
+p { margin: 12px 0; }
+ul { margin: 12px 0; padding-left: 24px; }
+li { margin: 6px 0; }
+a { color: #1a5fb4; }
+.updated { color: #666; font-size: 14px; }
+hr { margin: 48px 0; border: none; border-top: 2px solid #ddd; }
+</style>
+</head>
+<body>
+
+<h1>Gizli Kasa</h1>
+<p>Gizli Kasa, hesap bilgilerinizi (kullanıcı adı/şifre) ve seçtiğiniz dosyaları, cihazınızda tamamen çevrimdışı (offline) olarak, belirlediğiniz bir ana şifreyle şifreleyip saklamanızı sağlayan bir mobil uygulamadır. Uygulama internet bağlantısı gerektirmez, herhangi bir sunucuya bağlanmaz ve hiçbir veriyi cihazınız dışına göndermez.</p>
+
+<h2>Gizli Kasa Gizlilik Politikası</h2>
+<p class="updated">Son güncelleme: 12 Eylül 2026</p>
+
+<h3>Topladığımız Bilgiler</h3>
+<p><strong>Gizli Kasa hiçbir kişisel veri toplamaz.</strong> Uygulama internet erişimi izni dahi istemez (Android İzin: yalnızca cihazınızın parmak izi/yüz tanıma donanımını kullanmak için "Biyometrik Kimlik Doğrulama" izni istenir). Uygulamaya girdiğiniz tüm bilgiler (hesap başlıkları, kullanıcı adları, şifreler, eklediğiniz dosyalar) yalnızca cihazınızın kendi deposunda, sizin belirlediğiniz ana şifreden türetilen bir anahtarla (PBKDF2 + AES-GCM) şifrelenerek saklanır.</p>
+
+<h3>Bilgileri Nasıl Kullanıyoruz</h3>
+<p>Gizli Kasa'ya kaydettiğiniz bilgiler:</p>
+<ul>
+<li>Yalnızca kendi cihazınızda, şifreli olarak tutulur</li>
+<li>Hiçbir sunucuya, geliştiriciye veya üçüncü tarafa gönderilmez</li>
+<li>Hiçbir analiz, reklam veya izleme (tracking) hizmetiyle paylaşılmaz - uygulama bu tür bir hizmet kullanmaz</li>
+</ul>
+<p>Uygulama, kasanızı açmak için girdiğiniz ana şifreyi de hiçbir yerde düz metin olarak saklamaz; şifre yalnızca şifre çözme işlemi sırasında bellekte kullanılır.</p>
+
+<h3>Biyometrik Kimlik Doğrulama</h3>
+<p>İsteğe bağlı olarak parmak izi/yüz tanıma ile giriş özelliğini açarsanız, bu işlem tamamen cihazınızın kendi işletim sistemi (Android Keystore / iOS Keychain) üzerinden, cihaz üreticisinin güvenli donanımında gerçekleşir. Biyometrik verileriniz (parmak izi görüntüsü vb.) hiçbir zaman Gizli Kasa uygulamasına veya geliştiricisine ulaşmaz; bu bilgiler tamamen işletim sistemi tarafından yönetilir.</p>
+
+<h3>Dosya Erişimi</h3>
+<p>Kasanıza dosya eklemek istediğinizde, işletim sisteminin kendi dosya seçici (file picker) arayüzü açılır ve yalnızca sizin seçtiğiniz dosya(lar) uygulamaya kopyalanıp şifrelenir. Uygulama, seçtiğiniz dosyalar dışında cihazınızdaki başka dosyalara veya galerinize genel erişim talep etmez ya da taramaz.</p>
+
+<h3>Yedekleme</h3>
+<p>Uygulama içinden isteğe bağlı olarak oluşturabileceğiniz şifreli yedek dosyası (.secretvault), yalnızca sizin cihazınızda oluşturulur ve yalnızca siz onu paylaşmayı (örneğin kendi bulut deponuza veya bir başka cihaza) seçtiğinizde, işletim sisteminin kendi "paylaş" menüsü üzerinden aktarılır. Gizli Kasa bu yedeği hiçbir sunucuya otomatik olarak göndermez.</p>
+
+<h3>Otomatik Silme Güvenlik Özelliği</h3>
+<p>Kasanızın güvenliğini artırmak için, art arda çok sayıda yanlış ana şifre girilmesi durumunda (varsayılan: 10 deneme), kasa ve içindeki tüm veriler cihazınızda kalıcı olarak ve otomatik şekilde silinir. Bu işlem tamamen cihaz üzerinde gerçekleşir, hiçbir veri bu sırada dışarı gönderilmez.</p>
+
+<h3>Üçüncü Taraf Servisler</h3>
+<p>Gizli Kasa, hiçbir üçüncü taraf analiz, reklam veya bulut servisi (Firebase, Google Analytics, AdMob vb.) kullanmaz. Uygulama internet izni istemediği için zaten hiçbir ağ bağlantısı kuramaz.</p>
+
+<h3>Çocukların Gizliliği</h3>
+<p>Gizli Kasa herhangi bir veri toplamadığı için, kullanıcının yaşından bağımsız olarak hiçbir kişisel veri riski oluşturmaz. Yine de uygulama, hassas bilgilerin (şifreler vb.) saklanmasına yönelik olması nedeniyle genel kullanıcı kitlesi için tasarlanmıştır.</p>
+
+<h3>Haklarınız ve Veri Silme</h3>
+<p>Tüm verileriniz yalnızca kendi cihazınızda olduğu için, verileriniz üzerinde tam kontrol sizdedir. Uygulamayı silmeniz veya kasayı uygulama içinden silmeniz, tüm verilerin cihazınızdan kalıcı olarak silinmesi için yeterlidir. Sunucu tarafında saklanan hiçbir veri olmadığı için ayrıca bir "veri silme talebi" göndermenize gerek yoktur.</p>
+
+<p><strong>İletişim:</strong> support@getsubsync.com</p>
+
+<h2>Gizli Kasa Hizmet Şartları</h2>
+<p class="updated">Son güncelleme: 12 Eylül 2026</p>
+
+<p>Gizli Kasa'yı kullanarak aşağıdaki şartları kabul etmiş olursunuz:</p>
+<ul>
+<li>Gizli Kasa, verilerinizi yalnızca kendi cihazınızda şifreli olarak saklayan bağımsız bir araçtır.</li>
+<li>Ana şifrenizi unutmanız durumunda, kasanızdaki verilere geliştirici dahil hiç kimse tarafından erişilemez veya kurtarılamaz; bu, uygulamanın "sıfır bilgi" (zero-knowledge) mimarisinin doğal bir sonucudur.</li>
+<li>Art arda çok sayıda yanlış ana şifre denemesi, kasanın ve içindeki tüm verilerin kalıcı olarak silinmesine yol açar; kullanıcı bu riski kabul eder.</li>
+<li>Gizli Kasa "olduğu gibi" sunulur, kesintisiz veya hatasız çalışacağı garanti edilmez.</li>
+<li>Hizmet şartlarındaki değişiklikler bu sayfada yayınlanır.</li>
+</ul>
+
+<h3>Uygulanacak Hukuk</h3>
+<p>Bu hizmet şartları Türkiye Cumhuriyeti kanunlarına tabidir ve buna göre yorumlanır.</p>
+
+<p><strong>İletişim:</strong> support@getsubsync.com</p>
+
+<hr>
+
+<h1 lang="en">English Version</h1>
+<p lang="en">Gizli Kasa ("Secret Vault") is a mobile app that lets you store account credentials (usernames/passwords) and files you choose, encrypted on your own device with a master password you set, working entirely offline. The app does not require an internet connection, does not connect to any server, and never sends any data off your device.</p>
+
+<h2 lang="en">Gizli Kasa Privacy Policy</h2>
+<p class="updated" lang="en">Last updated: September 12, 2026</p>
+
+<h3 lang="en">Information We Collect</h3>
+<p lang="en"><strong>Gizli Kasa collects no personal data whatsoever.</strong> The app does not even request internet access permission (on Android, it only requests the "Biometric Authentication" permission to use your device's fingerprint/face recognition hardware). Everything you enter into the app (account titles, usernames, passwords, files you add) is stored only in your device's own storage, encrypted with a key derived from your own master password (PBKDF2 + AES-GCM).</p>
+
+<h3 lang="en">How We Use This Information</h3>
+<p lang="en">Data you save in Gizli Kasa:</p>
+<ul lang="en">
+<li>Is kept only on your own device, encrypted</li>
+<li>Is never sent to any server, developer, or third party</li>
+<li>Is never shared with any analytics, advertising, or tracking service - the app does not use any such service</li>
+</ul>
+<p lang="en">The app also never stores your master password itself anywhere in plain text; it is only used in memory during decryption.</p>
+
+<h3 lang="en">Biometric Authentication</h3>
+<p lang="en">If you optionally enable fingerprint/face unlock, this happens entirely through your device's own operating system (Android Keystore / iOS Keychain), on the device manufacturer's secure hardware. Your biometric data (fingerprint image, etc.) never reaches the Gizli Kasa app or its developer; it is managed entirely by the operating system.</p>
+
+<h3 lang="en">File Access</h3>
+<p lang="en">When you choose to add a file to your vault, the operating system's own file picker interface opens, and only the file(s) you select are copied into the app and encrypted. The app does not request broad access to, or scan, other files or your media gallery beyond the files you explicitly choose.</p>
+
+<h3 lang="en">Backups</h3>
+<p lang="en">The optional encrypted backup file (.secretvault) you can create from within the app is generated only on your device, and is only transferred when you choose to share it (for example, to your own cloud storage or another device) via your operating system's own share sheet. Gizli Kasa never automatically sends this backup to any server.</p>
+
+<h3 lang="en">Automatic Wipe Security Feature</h3>
+<p lang="en">To protect your vault, after a number of consecutive incorrect master password attempts (default: 10), the vault and all data inside it are permanently and automatically deleted on your device. This happens entirely on-device; no data is transmitted anywhere during this process.</p>
+
+<h3 lang="en">Third-Party Services</h3>
+<p lang="en">Gizli Kasa does not use any third-party analytics, advertising, or cloud service (Firebase, Google Analytics, AdMob, etc.). Since the app does not request internet permission, it cannot make any network connection at all.</p>
+
+<h3 lang="en">Children's Privacy</h3>
+<p lang="en">Since Gizli Kasa collects no data at all, it poses no personal data risk regardless of the user's age. That said, given its purpose of storing sensitive information (passwords, etc.), the app is designed for a general audience.</p>
+
+<h3 lang="en">Your Rights and Data Deletion</h3>
+<p lang="en">Because all your data lives only on your own device, you have complete control over it. Uninstalling the app, or deleting the vault from within the app, is sufficient to permanently delete all data from your device. Since no data is stored server-side, there is no need to submit a separate "data deletion request."</p>
+
+<p lang="en"><strong>Contact:</strong> support@getsubsync.com</p>
+
+<h2 lang="en">Gizli Kasa Terms of Service</h2>
+<p class="updated" lang="en">Last updated: September 12, 2026</p>
+
+<p lang="en">By using Gizli Kasa, you agree to the following terms:</p>
+<ul lang="en">
+<li>Gizli Kasa is an independent tool that stores your data, encrypted, only on your own device.</li>
+<li>If you forget your master password, no one - including the developer - can access or recover the data in your vault; this is a natural consequence of the app's zero-knowledge architecture.</li>
+<li>Repeated incorrect master password attempts will permanently delete the vault and all data inside it; the user accepts this risk.</li>
+<li>Gizli Kasa is provided "as is", without any guarantee of uninterrupted or error-free operation.</li>
+<li>Changes to these terms will be posted on this page.</li>
+</ul>
+
+<h3 lang="en">Governing Law</h3>
+<p lang="en">These terms are governed by and construed in accordance with the laws of the Republic of Turkey.</p>
+
+<p lang="en"><strong>Contact:</strong> support@getsubsync.com</p>
+
+</body>
+</html>
